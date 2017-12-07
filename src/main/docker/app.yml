@@ -1,0 +1,12 @@
+version: '2'
+services:
+    recruting-app:
+        image: recruiting
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:mysql://recruiting-mysql:3306/exercise?useUnicode=true&characterEncoding=utf8&useSSL=false
+            - APPLICATION_SLEEP=10 # gives time for the database to boot before the application
+    recruting-mysql:
+        extends:
+            file: mysql.yml
+            service: recruiting-mysql

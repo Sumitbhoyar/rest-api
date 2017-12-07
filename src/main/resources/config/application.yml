@@ -1,0 +1,17 @@
+spring:
+    application:
+        name: recruting
+    profiles:
+        active: #spring.profiles.active#
+    jpa:
+        open-in-view: false
+        hibernate:
+            ddl-auto: create
+        enabled: false
+info:
+    project:
+        version: #project.version#
+
+application:
+
+logging.level.org.hibernate.SQL: debug
